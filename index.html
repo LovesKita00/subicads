@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+		<title>SUBICADS ADVERTISING</title>
+
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		
+		 <meta charset="utf-8" />
+<link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="css/1.css"/>
+<link rel="stylesheet" href="theme/yyu.css"/>
+<script src="js/jqueryJs1.js"></script>
+<script src="js/jqueryJs2.js"></script>
+
+<script>
+	$(function(){
+    $('.fadein img:gt(0)').hide();
+    setInterval(function(){
+      $('.fadein :first-child').fadeOut()
+         .next('img').fadeIn()
+         .end().appendTo('.fadein');}, 
+      3000);
+});
+$(document).on( "mobileinit", function() {
+			$.mobile.defaultPageTransition = "slide";
+		});
+		
+	
+</script>
+<script type="text/javascript">
+function commaSeparateNumber(val){
+			while (/(\d+)(\d{3})/.test(val.toString())){
+			val = val.toString().replace(/(\d+)(\d{3})/, '$1'+','+'$2');
+			}
+			return val;
+			}
+function displayPrice(additional){
+	document.getElementById('plus').value=additional
+
+}
+function totalTarp(){
+	var a = document.getElementById('widthTarp').value;
+	var b = document.getElementById('heightTarp').value;
+	var c = document.getElementById('plus').value;
+	var width=parseInt(a);
+	var height=parseInt(b);
+	var radio=parseInt(c);
+	var test = (((width*height)*20)+radio);
+	var total= (((width*height)*20)+radio)+".00";
+	var total2 = parseInt(test);
+	$('#totalTarp').val(+commaSeparateNumber(total2)+".00");
+}
+function clearTarp(){
+	document.getElementById('widthTarp').value="";
+	document.getElementById('heightTarp').value="";
+	document.getElementById('totalTarp').value="";
+	
+
+}
+function ajax(){
+			var idjo = document.getElementById('jonumber').value;
+			var surl =  "http://gcccs.org/subicads/ajax.php?callback=?"; 
+			$.getJSON(surl,{id:idjo},  function(data) { 
+			$.each(data, function(key,val) {
+			document.getElementById('status').value=val.status;
+			document.getElementById('designer').value=val.designer;
+			document.getElementById('type').value=val.type;
+	  }); 
+});
+}
+
+</script>
+<style>
+
+.fadein { position:relative; width:100%; height:500px; }
+	.fadein img { position:absolute; left:0; top:0; }
+.bg-1st{
+				background-image:url('img/mainbg.png');
+				background-size:100% 100%;
+				-webkit-background-origin:border;
+				background-repeat:no-repeat;
+				background-attachment:fixed;
+}
+
+.bg 	{
+
+				background-image:url('img/mainbg.png');
+				background-size:100% 100%;
+				-webkit-background-origin;border;
+				background-repeat:no-repeat;
+				background-attachment:fixed;
+}
+.bg-status 	{
+
+				background-image:url('maintenance.png');
+				background-size:100% 100%;
+				-webkit-background-origin;border;
+				background-repeat:no-repeat;
+				background-attachment:fixed;
+}
+
+.bg2 	{
+
+				
+				background-size:100% 100%;
+				-webkit-background-origin;border;
+				background-repeat:no-repeat;
+				background-attachment:fixed;
+}
+
+	div#border {
+	background-color: silver;
+	width: 98%;
+	height: 50%;
+	border-radius: 20px;
+	padding: 7px;
+	
+	}
+	
+	div#border2 {
+	background-color: red;
+	width: 98%;
+	height: 50%;
+	border-radius: 20px;
+	padding: 7px;
+	
+	}
+.home 	{
+
+				background-image:url('img/home.png');
+				background-size:100% 100%;
+				-webkit-background-origin;border;
+				background-repeat:no-repeat;
+				background-attachment:fixed;
+}
+
+</style>
+
+</head>
+<body>
+<div data-role="page" id="front" class="home">
+	
+	<div data-role="content">
+		
+	</div>
+	<div data-role="footer" data-position="fixed" >
+	<div data-role="navbar">
+		<ul>
+			<li ><a href="#1st" data-theme="c">ENTER</a></li>
+			
+		</ul>
+	</div>
+	</div>
+</div>
+<!--1st page-->
+	<div data-role="page" id="1st" data-theme="a">
+		<div data-role="header" data-theme="a">
+
+	<h1><font size="3">SUBICADS ADVERTISING</font></h1>
+
+</div>
+		<div data-role="content" >
+			<a href="#mypanel"><img src="img/red.png" style="width:20;"></a>
+			<div class="fadein" align="center">
+			<center>
+			<img src="https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-ash3/1425614_722461737773559_112592410_n.jpg" style="width:100%; height:500px;">
+			<img src="https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-frc3/p206x206/1461808_722458721107194_2034620254_n.jpg" style="width:100%; height:500px;">
+			<img src="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-prn2/1468543_722458581107208_36024381_n.jpg" style="width:100%; height:500px;">
+			<img src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-prn2/p206x206/1471354_722462531106813_460734753_n.jpg" style="width:100%; height:500px;">
+			<img src="https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-ash3/p206x206/1477394_722460624440337_655622236_n.jpg" style="width:100%; height:500px;">
+			</center>
+		<br>
+		
+	</div>
+	<img src="img/a.png" style="height:500px;width:100%;">
+		</div>
+		
+		<div data-role="panel" data-display="reveal" id="mypanel" data-theme="a">
+			<a href="" data-rel="close" >CLOSE me</a>
+			<ul  data-role="listview" data-inset="false"  data-theme="" >
+					<li data-role="list-divider"data-theme="a"  ><font style='Font-family:nusaliver;Font-size:20px; '>MENU</font></li>
+				<!--	<li  data-theme="a"><a href="tarpaulin.html" rel="external"><img src="img/product.png" class="ui-li-has-thumb"/><h1 style='Font-family:calibri;Font-size:20px; '>TARPAULIN</h1></a></li>
+				-->	<li  data-theme="a"><a href="#track"><img src="img/5.png" class="ui-li-has-thumb"/><h1 style='Font-family:calibri;Font-size:20px; '>TRACK ORDER</h1></a></li>
+					<li  data-theme="a"><a href="#pricing"><img src="img/6.png" class="ui-li-has-thumb"/><h1 style='Font-family:calibri;Font-size:20px; '>TARPAULIN PRICING</h1></a></li>
+					<li  data-theme="a"><a href="#upload"><img src="img/4.png" class="ui-li-has-thumb"/><h1 style='Font-family:calibri;Font-size:20px; '>SEND LAYOUT</h1></a></li>
+					<li  data-theme="a"><a href="#contact"><img src="img/3b.png" class="ui-li-has-thumb"/><h1 style='Font-family:calibri;Font-size:20px; '>CONTACT US</h1></a></li>
+					<li  data-theme="a"><a href="https://m.facebook.com/subicads" target=_"blank" title="Click to view page"><img src="img/fb.png" class="ui-li-has-thumb"/><h1 style='Font-family:calibri;Font-size:20px; '>FACEBOOK</h1></a></li>
+					<li  data-theme="a"><a href="https://www.twitter.com/subicads" target=_"blank" title="Click to view page"><img src="img/twitter.png" class="ui-li-has-thumb"/><h1 style='Font-family:calibri;Font-size:20px; '>TWITTER</h1></a></li>
+					
+					<li  data-theme="a"><a href="#about"><img src="img/1.png" class="ui-li-has-thumb"/><h1 style='Font-family:calibri;Font-size:20px; '>ABOUT</h1></a></li>
+					
+				</ul>
+				<br><br><br><br>
+				
+		</div>
+	
+	</div>
+	<!--	
+	<div data-role="page" id="main"  data-theme="a" >
+		
+		
+					
+		<div data-role="content">
+		
+			<ul data-role="listview" data-inset="true" >
+						
+					<li data-role="list-divider" data-theme="a">
+					<center>
+						<h1 data-theme="a" style='Font-family:nusaliver;Font-size:50px;'>LATEST LED VIDEO</h1>
+					</center>
+					</li>
+					<li data-role="fieldcontain">
+					<div align="center" class="">
+					<!--<iframe width="650" height="700" src="//www.youtube.com/embed/WMHidjDB_Uk" frameborder="0" allowfullscreen></iframe><br>
+					<iframe src="//www.youtube.com/embed/WMHidjDB_Uk" width="650" height="700" name="search_iframe" frameborder="0" allowfullscreen></iframe> -->
+				<!--	<iframe width="650" height="700" src="http://www.youtube.com/embed/7O1A2OgMNOw?feature=player_detailpage" name="search_iframe" frameborder="0" allowfullscreen></iframe>
+					</div>
+					</li>
+					</ul>
+					<hr>
+					<ul data-role="listview" data-inset="true">
+						<li data-role="list-divider" data-theme="a">
+						<h1>RECENT VIDEOS</h1>
+						</li>
+						<div align="center" class="list">
+						<a href="http://www.youtube.com/embed/7O1A2OgMNOw?feature=player_embedded" target="search_iframe"  ><img  src="img/ledvideos.png" alt="Paris, France" style="width:200px; height:200px;"></a>
+						<a href="http://www.youtube.com/embed/7O1A2OgMNOw?feature=player_embedded" target="search_iframe"  ><img  src="img/ledvideos.png" alt="Paris, France" style="width:200px; height:200px;"></a>
+						<a href="http://www.youtube.com/embed/7O1A2OgMNOw?feature=player_embedded" target="search_iframe"  ><img  src="img/ledvideos.png" alt="Paris, France" style="width:200px; height:200px;"></a>
+						
+						</div>
+					</ul>
+					
+					<div data-role="panel" id="mypanel" data-theme="a" data-display="reveal">
+					
+						<a href="" data-role="button" data-rel="close">Close Me</a>
+					</div>
+		
+	
+			<div data-role="panel" id="mypanel" data-theme="" data-display="push" class="bg" >
+					<ul  data-role="listview" data-inset="false"  data-theme="" >
+					<li data-role="list-divider"data-theme="a"  ><font style='Font-family:nusaliver;Font-size:20px; '>MENU</font></li>
+					<li  data-theme=""><a href="tarpaulin.html" rel="external"><img src="img/product.png" class="ui-li-has-thumb"/><h1 style='Font-family:nusaliver;Font-size:20px; '>TARPAULIN</h1></a></li>
+					<li  data-theme=""><a href="#reservation"><img src="img/icons/ic_done.png" class="ui-li-has-thumb"/><h1 style='Font-family:nusaliver;Font-size:20px; '>RESERVATIONS</h1></a></li>
+					<li  data-theme=""><a href="#status"><img src="img/monitoring.png" class="ui-li-has-thumb"/><h1 style='Font-family:nusaliver;Font-size:20px; '>ORDER STATUS</h1></a></li>
+					<li  data-theme=""><a href="#utility"><img src="img/icons/ic_help.png" class="ui-li-has-thumb"/><h1 style='Font-family:nusaliver;Font-size:20px; '>UTILITIES</h1></a></li>
+					<li  data-theme=""><a href="#pricing"><img src="img/icons/ic_help.png" class="ui-li-has-thumb"/><h1 style='Font-family:nusaliver;Font-size:20px; '>PRICING</h1></a></li>
+					<li  data-theme=""><a href="#about"><img src="img/icons/ic_help.png" class="ui-li-has-thumb"/><h1 style='Font-family:nusaliver;Font-size:20px; '>GUIDE</h1></a></li>
+					
+				</ul>
+			</div>
+	-->	
+				
+	</div>
+<!--ORDER STATUS-->
+
+	<div data-role="page" id="status" class="bg-status" data-theme="">
+		<!--<div data-role="content">
+			
+						<ul data-role="listview" data-inset="true" data-theme="">
+                        <li data-role="fieldcontain" data-theme="a">
+                            <h1 style='Font-family:nusaliver;Font-size:25px;' >ORDER CATEGORY:</h1>
+                        </li>
+						<li data-role="fieldcontain">
+                            <input type="text" data-clear-btn="true" name="" id="" value="" style='Font-family:nusaliver;Font-size:25px;' >
+                        </li>		
+						<li data-role="fieldcontain" data-theme="a">
+                            <h1 style='Font-family:nusaliver;Font-size:25px;' >JOB ORDER NUMBER:</h1>
+                        </li>
+						<li data-role="fieldcontain">
+                            <input type="text" data-clear-btn="true" id="jonumber" name="jonumber" value="" style='Font-family:nusaliver;Font-size:25px; ' >
+                        </li>
+						<li data-role="fieldcontain">
+						<a href="#" onclick="getJO(jonumber.value)" data-role="button" ><h2 style="Font-family:nusaliver;">TRACK</h2></a>
+						</li>
+						</ul>
+						
+						
+						<div id="status" style= "margin-top: 500px; Font-family:nusaliver;Font-size:50px; color: white;" align="center"></div>
+		</div>
+		-->
+		<div data-role="footer" data-theme="" data-position="fixed" class="ui-overlay-shadow" style="padding:3px;" role="banner">
+					<a data-rel="back" data-role="button" data-icon="back" data-iconpos="left" data-mini="true" data-theme="a"><font style="Font-family:nusaliver;Font-size:15px;">Back</font></a>
+		</div> 
+	</div>
+<!--PRICING-->
+<div data-role="page" id="pricing" class="bg-1st" data-theme="a">
+		<div data-role="header" data-theme="a">
+
+	<h1><font size="3">TARPAULIN PRICING</font></h1>
+
+</div>
+	<div data-role="content">
+				
+				<ul data-role="listview" data-inset="true" data-theme="a">
+					<li data-role="fieldcontain">
+					<h1 style='Font-family:nusaliver;Font-size:25px;'>TOTAL PRICE:</h1>
+					</li>
+					<li data-role="fieldcontain">
+					<input type="text" disabled="disabled" id="totalTarp" style='Font-family:nusaliver;Font-size:25px;'  data-theme="a"/>
+					</li>
+				</ul>
+				<ul data-role="listview" data-inset="true" data-theme="a">
+					
+					<li data-role="fieldcontain">
+					<h1 style='Font-family:nusaliver;Font-size:25px;'>HEIGHT:</h1>
+					</li>
+					<li data-role="fieldcontain">
+					<input type="text" data-theme="a" data-clear-btn="true"  id="widthTarp" value="" style='Font-family:nusaliver;Font-size:25px;' >
+					</li>
+					<li data-role="fieldcontain">
+						<h1 style='Font-family:nusaliver;Font-size:25px;'>WIDTH:</h1>
+					</li>
+					<li data-role="fieldcontain">
+					<input type="text" data-theme="a" data-clear-btn="true"  id="heightTarp" value="" style='Font-family:nusaliver;Font-size:25px;'>
+					</li>
+					<li data-role="fieldcontain">
+					<h1 style='Font-family:nusaliver;Font-size:25px;' >ADDITIONAL:</h1>
+					</li>
+					<li data-role="fieldcontain">
+						<input type="text" style='Font-family:nusaliver;Font-size:25px;' id="plus" data-theme="a" disabled="disabled"/>
+					</li>
+
+					<li data-role="fieldcontain">
+						
+					<label><input type="radio" data-theme="a" name="radio-choice-0" onclick="displayPrice(this.value)" id="layoutTarp" value="150" style=''><h1  style='Font-family:nusaliver;Font-size:25px;' align="center">W/ LAYOUT</h1></label>	
+					<label><input type="radio" data-theme="a" name="radio-choice-0" onclick="displayPrice(this.value)" id="layoutTarp" value="0"><h1  style='Font-family:nusaliver;Font-size:25px;' align="center">W/O LAYOUT</h1></label>
+					</li>
+					<li data-role="fieldcontain">
+						<a href="#" data-role="button" onclick="totalTarp()"><font style='Font-family:nusaliver;Font-size:25px;'>COMPUTE</font></a>
+					</li>
+					
+				</ul>
+	</div>
+</div>	
+<div data-role="page" id="upload" data-theme="a">
+		<div data-role="header">
+		<div align="center">
+		<h1>SEND LAYOUT</h1>
+		</div>
+	</div>
+	<div data-role="content">
+	
+			<form action="http://gcccs.org/subicads/success1.php" method="post"  enctype="multipart/form-data">
+			<!-- Toggle Off -->
+			<hr class="gradient">
+			
+			<!-- Text field --> 
+			
+			<div data-role="fieldcontain">
+				<label for="name"><font color="white">Name:</font></label>
+				<input type="text" name="name" id="name"  required/>
+			</div>
+			<hr class="gradient">
+			<div data-role="fieldcontain">
+				<label for="contact"><font color="white">Contact Number:</font></label>
+				<input type="text" name="contact" id="contact" required/>
+			</div>
+			<hr class="gradient">
+			<div data-role="fieldcontain">
+				<label for="email"><font color="white">Email Address:</font></label>
+				<input type="text" name="email" id="email" required/>
+			</div>
+
+			<hr class="gradient">
+			<div data-role="fieldcontain">
+				<label for="code"><font color="white">Layout Code</font></label>
+				<input type="text" name="code" id="code" required/>
+			</div>
+
+			<hr class="gradient">
+
+			<!-- Drop Down -->
+			<div data-role="fieldcontain">
+				<label for="category" class="select"><font color="white">Category:</font></label>
+				<!--<select name="select-choice-1" id="select-choice-custom" data-native-menu="false">-->
+				<select name="category" id="category" data-theme="a">
+					<option value="Birthday">Birthday</option>
+					<option value="Certificate">Certificates</option>
+					<option value="Calendar">Calendar</option>
+					<option value="Business Card">Business</option>
+					<option value="Invitation">Invitation</option>
+					<option value="Menu">Menu</option>
+					<option value="Logo">Logo</option>
+					<option value="Banner">Banner</option>
+				</select>
+			</div>
+
+			<hr class="gradient">
+			<div data-role="fieldcontain">
+				<label for="content"><font color="white">Content:</font></label>
+				<textarea name="content" id="content" placeholder="Enter Content Here" required></textarea>
+			</div>
+
+			<hr class="gradient">
+
+			<div data-role="fieldcontain">
+			<!-- Radio -->
+<label for="image"><font color="white">Image:</font></label>
+			<input name="image" id="image" type="file" name="image">
+				
+</div>
+			<input type="submit" name="submit" value="SEND"  data-theme="a">
+			<hr class="gradient">
+			<!-- Checkbox -->
+			
+		
+		
+		</form>
+<br><br><br><br><br>
+	</div>
+	<div data-role="footer">
+		
+	</div>
+		
+	</div>
+<div data-role="page" id="track" data-theme="a">
+		<div data-role="header">
+			<h1>TRACK ORDER</h1>
+		</div>
+		<div data-role="content">
+			
+<hr class="gradient">
+<form>
+<div data-role="fieldcontain" data-theme="a" >
+<label for="jonumber" data-theme="c"><font color="white">JO Number:</font></label>
+<input type="text" data-theme="c" name="jonumber" id="jonumber" placeholder="."/>
+</div>
+<hr class="gradient">
+<div data-role="fieldcontain">
+<label for="status" data-theme="a"><font color="white">Status:</font></label>
+<input type="text" data-theme="a" name="status" id="status" placeholder="Status will be shown here.." class="ui-disabled">
+</div>
+<hr class="gradient">
+<div data-role="fieldcontain">
+<label for="status" data-theme="a"><font color="white">Designer:</font></label>
+<input type="text" data-theme="a" name="designer" id="designer" placeholder="Status will be shown here.." class="ui-disabled">
+</div>
+<hr class="gradient">
+<div data-role="fieldcontain">
+<label for="status" data-theme="a"><font color="white">Layout Category:</font></label>
+<input type="text" data-theme="a" name="type" id="type" placeholder="Status will be shown here.." class="ui-disabled">
+</div>
+<hr class="gradient">
+<div data-role="fieldcontain">
+<a href="#" id="track" onclick="ajax()" data-role="button" data-theme="a">SHOW STATUS</a>
+</div>
+</form>
+<hr class="gradient">
+		</div>
+		
+		
+	</div>
+<div data-role="page" id="contact" data-theme="a" >
+
+	<div data-role="header">
+		<div align="center">
+			<h1>Contact Us</h1>
+		</div>
+	</div>
+	<div data-role="content" align="center" data-theme="a"><br>
+	<img src="img/3.png" width="350" height="350">
+	<br><br><br>
+	<ul data-role="listview" data-divider-theme="c">
+	
+	<li><a href="tel:+63472239142"><img src="img/calll.png" alt="list thumbnail">Talk n Text</a></li>
+	<li><a href="tel:+639228286514"><img src="img/calll.png" alt="list thumbnail"  height="40%" width="40%">Sun Cellular</a></li>
+	<li><a href="tel:+639202005225"><img src="img/calll.png" alt="list thumbnail"  height="40%" width="40%">Smart</a></li>
+	<li><a href="mailto:subicadsled@hotmail.com"><img src="img/gmail.png" alt="list thumbnail" height="40%" width="40%" >Hotmail</a></li>
+	<li><a href="mailto:subicads@yahoo.com"><img src="img/gmail.png" alt="list thumbnail" height="40%" width="40%" >Yahoo Mail</a></li>
+	</ul>
+	
+	</div>
+	
+</div>
+<div data-role="page" id="about" data-theme="a">
+	<div data-role="content" align="center" data-theme="a">
+	<img src="img/aboutp.png" style="width:100%; height:100%;">
+	
+	
+	
+	</div>
+</div>
+</body>
+
+
+
+</html>

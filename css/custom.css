@@ -1,0 +1,11 @@
+		@font-face {
+				font-family: 'nusaliver'; /*a name to be used later*/
+				src: url('fonts/nusaliver.TTF'); /*URL to font*/
+				
+	.font-btn {
+				font-family: 'nusaliver';
+				font-size: 26px;
+				color: black;
+				text-shadow: 2px 2px black;
+				text-align: center;
+			}
